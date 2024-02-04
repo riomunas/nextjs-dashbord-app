@@ -4,7 +4,8 @@ import {
   UserGroupIcon,
   InboxIcon,
 } from '@heroicons/react/24/outline';
-import { lusitana } from '@/app/ui/fonts';
+import { nunito } from '@/app/ui/fonts';
+import clsx from 'clsx';
 
 const iconMap = {
   collected: BanknotesIcon,
@@ -37,18 +38,26 @@ export function Card({
 }: {
   title: string;
   value: number | string;
-  type: 'invoices' | 'customers' | 'pending' | 'collected';
+  type: 'collected' | 'pending' | 'invoices' | 'customers';
 }) {
   const Icon = iconMap[type];
 
   return (
-    <div className="rounded-xl bg-gray-50 p-2 shadow-sm">
+    <div className={clsx(
+      "rounded-xl bg-gray-50 p-2 shadow-sm",
+      {
+        "bg-green-300": type == 'collected',
+        "bg-red-300": type == 'pending',
+        "bg-sky-300": type == 'invoices',
+        "bg-orange-300": type == 'customers',
+      }
+    )}>
       <div className="flex p-4">
         {Icon ? <Icon className="h-5 w-5 text-gray-700" /> : null}
         <h3 className="ml-2 text-xs font-medium">{title}</h3>
       </div>
       <p
-        className={`${lusitana.className}
+        className={`${nunito.className}
           truncate rounded-xl bg-white px-4 py-8 text-center text-2xl`}
       >
         {value}
