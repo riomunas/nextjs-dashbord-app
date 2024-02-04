@@ -37,7 +37,7 @@ export default function NavLinks() {
               'flex h-[32px] grow items-center justify-center gap-2 rounded-md p-3 font-medium md:flex-none md:justify-start md:p-2 md:px-3',
               {
                 'bg-gray-50 hover:bg-sky-100 hover:text-blue-600': pathname !== link.href,
-                'bg-sky-900 text-blue-100': pathname === link.href,
+                'bg-sky-700 text-blue-100': pathname === link.href,
               }
             )}
           >
