@@ -37,16 +37,16 @@ export default async function LatestInvoices({
                     height={32}
                   />
                   <div className="min-w-0">
-                    <p className="truncate text-sm font-semibold md:text-base">
+                    <p className="truncate text-xs font-semibold md:text-base">
                       {invoice.name}
                     </p>
-                    <p className="hidden text-sm text-gray-500 sm:block">
+                    <p className="hidden text-xs text-gray-500 sm:block">
                       {invoice.email}
                     </p>
                   </div>
                 </div>
                 <p
-                  className={`${lusitana.className} truncate text-sm font-medium md:text-base`}
+                  className={`${lusitana.className} truncate text-xs font-medium md:text-base`}
                 >
                   {invoice.amount}
                 </p>
@@ -56,7 +56,7 @@ export default async function LatestInvoices({
         </div> */}
         <div className="flex items-center pb-2 pt-6">
           <ArrowPathIcon className="h-5 w-5 text-gray-500" />
-          <h3 className="ml-2 text-sm text-gray-500 ">Updated just now</h3>
+          <h3 className="ml-2 text-xs text-gray-500 ">Updated just now</h3>
         </div>
       </div>
     </div>

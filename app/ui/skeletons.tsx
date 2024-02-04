@@ -9,7 +9,7 @@ export function CardSkeleton() {
     >
       <div className="flex p-4">
         <div className="h-5 w-5 rounded-md bg-gray-200" />
-        <div className="ml-2 h-6 w-16 rounded-md bg-gray-200 text-sm font-medium" />
+        <div className="ml-2 h-6 w-16 rounded-md bg-gray-200 text-xs font-medium" />
       </div>
       <div className="flex items-center justify-center truncate rounded-xl bg-white px-4 py-8">
         <div className="h-7 w-20 rounded-md bg-gray-200" />
@@ -177,7 +177,7 @@ export function InvoicesTableSkeleton() {
             <InvoicesMobileSkeleton />
           </div>
           <table className="hidden min-w-full text-gray-900 md:table">
-            <thead className="rounded-lg text-left text-sm font-normal">
+            <thead className="rounded-lg text-left text-xs font-normal">
               <tr>
                 <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
                   Customer

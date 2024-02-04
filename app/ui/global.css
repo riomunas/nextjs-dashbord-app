@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-size: 12px; /* Set your default font size here */
+}
+
 input[type='number'] {
   -moz-appearance: textfield;
   appearance: textfield;
